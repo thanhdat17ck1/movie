@@ -1,0 +1,40 @@
+.c-header {
+    background-color: #19212d;
+
+    .inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 0;
+    }
+    ul {
+        display: flex;
+        li {
+           color: #bbad89;
+           font-size: 1.6rem;
+           font-weight: 500;
+
+           + li {
+            margin-left: 30px;
+           }
+        }
+    }
+    
+    &__user {
+        color: #bbad89;
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+
+    &__logo {
+        color: #fff;
+        font-size: 2rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 35px;
+            margin-right: 10px;
+        }
+    }
+}

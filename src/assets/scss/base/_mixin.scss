@@ -1,0 +1,55 @@
+//============================================
+// clearfix
+//============================================
+@mixin clear {
+    *zoom: 1;
+
+    &::after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+}
+
+//============================================
+// breakpoint
+//============================================
+@mixin sp {
+    @media only screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin tab {
+    @media only screen and (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin land {
+    @media only screen and (max-width: 991px) and (max-width: 991px) and (orientation: landscape) {
+        @content;
+    }
+}
+
+$mq-breakpoints: (
+    "xs": 395px,
+    "sm": 576px,
+    "md": 768px,
+    "lg": 992px,
+    "tab": 1024px,
+    "xl": 1200px,
+    "xxl": 1500px,
+);
+
+@mixin mq($breakpoint: md, $rule: min, $subtraction: true) {
+    $breakpoint: map_get($mq-breakpoints, $breakpoint);
+
+    @if $rule==max and $subtraction {
+        $breakpoint: $breakpoint - 1;
+    }
+
+    @media screen and (#{$rule}-width: $breakpoint) {
+        @content;
+    }
+}

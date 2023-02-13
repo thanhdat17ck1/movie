@@ -1,0 +1,41 @@
+.movie-box-trending {
+    width:100%;
+    margin-top: 50px;
+    .movie-item-trending {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: unset;
+        align-items: center;
+        padding: 5px 0 5px 5px;
+        .number-rank {
+            width: 23px;
+            height: 23px;
+            background: #c58560;
+            border-radius: 360%;
+            margin-right: 7px;
+            p {
+                text-align: center;
+                line-height: 22px;
+                font-weight: 600;
+            }
+        }
+        .content {
+            width: calc(100% - 30px);
+            h4.title {
+                &:hover {
+                    color: #da966e;
+                }
+            }
+            p.popularity {
+                font-size: 12px;
+                font-weight: 400;
+                font-style: italic;
+                color: #BABABA;
+                margin-top: 3px;
+            }
+        }
+        &:nth-child(even) {
+            background:rgb(24 24 24);
+        }
+    }
+}
