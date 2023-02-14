@@ -14,7 +14,7 @@ export default function Header() {
             <Link to="/" className="c-header__logo"><img src={logo} alt="" />Movies7.to</Link>
             <ul>
                 <li>
-                    <Link to="/">Home</Link>
+                    <Link to="/">Home 1</Link>
                 </li>
                 <li>
                     <Link to="/contact">Contact</Link>
